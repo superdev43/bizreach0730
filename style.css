@@ -96,6 +96,7 @@ header {
     background: #fff;
     position: relative;
     display: block;
+    overflow: hidden;
 }
 
 .lg-kv {
@@ -147,10 +148,26 @@ header {
     opacity: 0;
 }
 
+@media screen and (min-width:1590px) and (max-width:1993px) {
+    .kv_img{
+        width: 1994px;
+        position: relative;
+        top: 0;
+        margin: 0 auto;
+        left: calc(0px - (1994px - 100vw) / 2);
+    }
+    .kv_img .three-imgs {
+        width: 44%;
+        margin-top: 381.600px;
+        margin-bottom: 47.7px;
+    }
+}
+
 @media (min-width:1994px) {
     .kv_img .three-imgs {
-        margin-top: 558.040px;
-        margin-bottom: 59.79px;
+        width: 44%;
+        margin-top: 381.600px;
+        margin-bottom: 47.7px;
     }
     .top-comment {
         font-size: 29.91px;
@@ -1475,11 +1492,12 @@ header {
     background-size: contain;
 }
 
-.expansion .expansion_ttl.active .expansion_ttl_bg::before{
+.expansion .expansion_ttl.active .expansion_ttl_bg::before {
     max-width: 0;
 }
-.expansion .expansion_ttl .expansion_ttl_bg::before{
-     content: "";
+
+.expansion .expansion_ttl .expansion_ttl_bg::before {
+    content: "";
     width: 100%;
     height: 100%;
     background-color: white;
@@ -1489,6 +1507,7 @@ header {
     right: 1px;
     max-width: 100%;
 }
+
 .expansion_ttl p {
     font-size: 28px;
     font-weight: bold;
@@ -1552,6 +1571,7 @@ header {
     max-width: 100%;
     width: 300px;
 }
+
 .expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img {
     width: 100%;
     height: auto;
@@ -1559,13 +1579,18 @@ header {
     overflow: hidden;
     transition: max-width .5s ease-out;
 }
-.expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img img{
+
+.expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img img {
     width: 300px;
     height: auto;
     min-width: 300px;
-    max-width: inherit;    
+    max-width: inherit;
 }
-.expansion .expansion_wrap .expansion_img.active .fade_bg .fade_bg_img::before {max-width: 0;}
+
+.expansion .expansion_wrap .expansion_img.active .fade_bg .fade_bg_img::before {
+    max-width: 0;
+}
+
 .expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img::before {
     content: "";
     width: 100%;
@@ -1578,6 +1603,7 @@ header {
     z-index: 3;
     max-width: 100%;
 }
+
 .expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img-1 {
     width: 100%;
     height: auto;
@@ -1585,13 +1611,18 @@ header {
     overflow: hidden;
     transition: max-width .4s ease-out;
 }
-.expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img-1 img{
+
+.expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img-1 img {
     width: 300px;
     height: auto;
     min-width: 300px;
-    max-width: inherit;    
+    max-width: inherit;
 }
-.expansion .expansion_wrap .expansion_img.active .fade_bg .fade_bg_img-1::before {max-width: 0;}
+
+.expansion .expansion_wrap .expansion_img.active .fade_bg .fade_bg_img-1::before {
+    max-width: 0;
+}
+
 .expansion .expansion_wrap .expansion_img .fade_bg .fade_bg_img-1::before {
     content: "";
     width: 100%;
@@ -1615,9 +1646,11 @@ header {
     bottom: -55px;
     padding: 20px 120px 20px 50px;
 }
+
 .expansion .expansion_wrap .expansion_img .fade_bg.active-1 .info::before {
     max-width: 0;
 }
+
 .expansion .expansion_wrap .expansion_img .fade_bg .info::before {
     content: "";
     width: 100%;
@@ -1628,7 +1661,7 @@ header {
     top: 0px;
     right: 0px;
     z-index: 4;
-    max-width: 68%;
+    max-width: 100%;
 }
 
 .custom-info {
@@ -1651,22 +1684,26 @@ header {
     margin-top: 40px;
     max-width: 100%;
 }
+
 .expansion .portfolio-img .only-img {
     width: 100%;
     overflow: hidden;
     transition: max-width 0.5s ease-out;
     position: relative;
 }
-.expansion .portfolio-img .only-img img{
+
+.expansion .portfolio-img .only-img img {
     width: 770px;
     height: auto;
     min-width: 770px;
     max-width: inherit;
 }
-.expansion .portfolio-img.active .only-img::before{
+
+.expansion .portfolio-img.active .only-img::before {
     max-width: 0;
 }
-.expansion .portfolio-img .only-img::before{
+
+.expansion .portfolio-img .only-img::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -1678,17 +1715,21 @@ header {
     max-width: 100%;
 }
 
-
 .expansion .expansion_wrap .expansion_img .fade_bg .info .com {
+    z-index: 5;
     font-size: 16px;
 }
 
 .expansion .expansion_wrap .expansion_img .fade_bg .info .job {
+    z-index: 5;
+
     font-size: 14px;
 }
 
 .expansion .expansion_wrap .expansion_img .fade_bg .info .name {
     font-size: 21px;
+    z-index: 5;
+
 }
 
 .expansion .expansion_wrap .expansion_img .fade_bg .info .name .small {
@@ -1796,7 +1837,7 @@ header {
 }
 
 @media screen and (max-width: 639px) {
-    .expansion .portfolio-img .only-img img{
+    .expansion .portfolio-img .only-img img {
         width: 100%!important;
         min-width: 100%!important;
     }
@@ -1807,8 +1848,8 @@ header {
         width: 67%;
         padding: 20px 50px;
         transform: scaleX(1);
-		text-align: left!important;
-		top:20px;
+        text-align: left!important;
+        top: 20px;
     }
     .expansion .expansion_wrap .expansion_img .fade_bg .info .com {
         transform: scaleX(1);
@@ -1831,8 +1872,8 @@ header {
         margin: 50px auto 0;
     }
     .expansion .expansion_ttl p {
-		font-size: 4.5vw;
-		line-height:5.5vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
     }
     .expansion .expansion_ttl p br {
         display: block;
@@ -2007,7 +2048,6 @@ header {
 .about {
     max-width: 2000px;
     margin: 70px auto 0;
-
 }
 
 .about_block {
@@ -2015,13 +2055,12 @@ header {
     height: 67px;
     align-items: center;
     display: flex;
-	justify-content: center;
-	border-bottom: 7px solid #009de6 ;
+    justify-content: center;
+    border-bottom: 7px solid #009de6;
     background-color: #006098;
     font-size: 28px;
     font-weight: bold;
-	color: white;
-	
+    color: white;
 }
 
 .about_text .text_desc {
@@ -2040,9 +2079,11 @@ header {
     background-color: #fff;
     text-align: center;
 }
+
 .about_container .about-img img {
     width: 100%;
 }
+
 .pt-0 {
     padding-top: 10px!important;
     text-align: right!important;
@@ -2376,7 +2417,7 @@ header {
     /* .about_container img {
         width: 100%;
     } */
-    .pt-0{
+    .pt-0 {
         text-align: center!important;
     }
     .about_bg {
@@ -2464,7 +2505,7 @@ header {
     /* .about_container img {
         width: 100%;
     } */
-    .pt-0{
+    .pt-0 {
         text-align: center!important;
     }
     .about_bg {

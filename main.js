@@ -118,7 +118,7 @@ function btnmove() {
                 var scroll = $(window).scrollTop(); // 現在のスクロール位置
                 var offset = $(this).offset().top; // 対象の上からの位置
                 var windowHeight = $(window).height(); // ウィンドウの高さ
-                if (scroll > offset - windowHeight+500) {
+                if (scroll > offset - windowHeight+200) {
                     $(this).addClass("active-1");
                 }
             });

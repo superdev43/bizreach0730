@@ -1,22 +1,7 @@
-$(function () {
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > $('.main-img-01.mov').offset().top - $(window).height() + 100) {
-
-            $('.main-img-01.mov').addClass("on")
-        }
-        if ($(window).scrollTop() > $('.main-img-02.mov').offset().top - $(window).height() + 100) {
-
-            $('.main-img-02.mov').addClass("on")
-        }
-    })
-});
-
 
 
 $(window).on('load', function () {
-    $('.kv_img').addClass(' active');
-    $('.top-comment').animate({ opacity: 1 }, 500)
-    $('.top-comment p').animate({ top: 0 }, 500)
+    $('.three-imgs').animate({ opacity: 1 }, 500);
 })
 
 $(function () {
@@ -103,8 +88,38 @@ function btnmove() {
                 var scroll = $(window).scrollTop(); // 現在のスクロール位置
                 var offset = $(this).offset().top; // 対象の上からの位置
                 var windowHeight = $(window).height(); // ウィンドウの高さ
-                if (scroll > offset - windowHeight + 350) {
+                if (scroll > offset - windowHeight + 150) {
                     $(this).addClass("scrollIn");
+                }
+            });
+        });
+    });
+})(jQuery);
+(function ($) {
+    $(document).ready(function ($) {
+        // フェードイン
+        $(window).scroll(function () {
+            $('.opening').each(function () {
+                var scroll = $(window).scrollTop(); // 現在のスクロール位置
+                var offset = $(this).offset().top; // 対象の上からの位置
+                var windowHeight = $(window).height(); // ウィンドウの高さ
+                if (scroll > offset - windowHeight) {
+                    $(this).addClass("active");
+                }
+            });
+        });
+    });
+})(jQuery);
+(function ($) {
+    $(document).ready(function ($) {
+        // フェードイン
+        $(window).scroll(function () {
+            $('.opening-1').each(function () {
+                var scroll = $(window).scrollTop(); // 現在のスクロール位置
+                var offset = $(this).offset().top; // 対象の上からの位置
+                var windowHeight = $(window).height(); // ウィンドウの高さ
+                if (scroll > offset - windowHeight+500) {
+                    $(this).addClass("active-1");
                 }
             });
         });
